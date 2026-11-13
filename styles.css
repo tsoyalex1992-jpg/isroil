@@ -59,6 +59,25 @@ ul,ol{list-style:none}
 .lang__b.is-on{background:var(--lime);color:var(--g);opacity:1}
 .top .btn--sm{display:none}
 
+/* ---------- звонок ---------- */
+.callbtn{display:inline-flex;align-items:center;gap:8px;min-height:42px;min-width:42px;justify-content:center;border-radius:999px;color:inherit;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.16)}
+.callbtn span{display:none}
+.top.is-solid .callbtn{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.calllink{display:inline-flex;align-items:center;gap:10px;margin-top:14px;color:var(--mute-d);text-decoration:none;font-size:15px;line-height:1.35;text-align:left}
+.calllink .ic{color:var(--lime);width:20px;height:20px}
+.calllink b{color:#fff;white-space:nowrap;border-bottom:2px solid var(--lime)}
+.calllink--dark{color:var(--muted);margin-top:18px}
+.calllink--dark .ic{color:var(--pool-d)}
+.calllink--dark b{color:var(--g);border-color:var(--pool)}
+.hero__cta{text-align:center}
+.hero__cta .calllink{justify-content:center}
+@media(max-width:420px){.logo{font-size:15px;gap:7px}.logo__mark{width:22px;height:22px}.lang__b{padding:0 11px}.top__right{gap:8px}.wrap{padding:0 16px}}
+.foot__tel{color:#fff;font-weight:700;font-size:16px;text-decoration:none;border-bottom:2px solid var(--lime)}
+.callfab{flex:0 0 58px;width:58px;height:58px;border-radius:50%;background:var(--g);color:var(--lime);display:grid;place-items:center;box-shadow:4px 5px 0 2px rgba(15,22,25,.25)}
+.callfab .ic{width:26px;height:26px}
+.sticky{display:flex;gap:12px;align-items:center}
+.sticky .btn{flex:1}
+
 /* ---------- HERO ---------- */
 .hero{background:var(--g);color:#fff}
 .hero__stage{position:relative;min-height:100svh;min-height:max(640px,100svh);display:flex;flex-direction:column;justify-content:space-between;padding:92px 0 28px;overflow:hidden}
@@ -301,6 +320,10 @@ body.lock{overflow:hidden}
 /* ---------- планшет / десктоп ---------- */
 @media(min-width:760px){
   body{padding-bottom:0}
+  .callbtn{padding:0 16px}
+  .callbtn span{display:inline}
+  .hero__cta{text-align:left}
+  .hero__cta .calllink{justify-content:flex-start}
   .dealer{padding:80px 0}
   .dealer__in{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px}
   .rv{width:340px}
