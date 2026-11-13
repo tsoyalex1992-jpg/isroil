@@ -32,6 +32,7 @@
   <symbol id="i-dust" viewBox="0 0 24 24"><circle cx="6" cy="8" r="1.500" fill="currentColor"/><circle cx="12" cy="5" r="1.100" fill="currentColor"/><circle cx="17.500" cy="9" r="1.700" fill="currentColor"/><circle cx="9" cy="14" r="1.200" fill="currentColor"/><circle cx="15" cy="16" r="1.400" fill="currentColor"/><circle cx="19" cy="18.500" r=".9" fill="currentColor"/><circle cx="5" cy="19" r=".9" fill="currentColor"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.500 4.500 4.500L19 7.500" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-no" viewBox="0 0 24 24"><path d="m7 7 10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"/></symbol>
+  <symbol id="i-call" viewBox="0 0 24 24"><path d="M6.600 3.500h3l1.500 4-2 1.500a11 11 0 0 0 5.500 5.500l1.500-2 4 1.500v3a2 2 0 0 1-2 2A15.500 15.500 0 0 1 4.600 5.500a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.900" stroke-linejoin="round"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"/></symbol>
 </svg>
 
@@ -47,6 +48,7 @@
         <button type="button" class="lang__b is-on" data-lang="uz">UZ</button>
         <button type="button" class="lang__b" data-lang="ru">RU</button>
       </div>
+      <a class="callbtn" href="tel:+998935178372" data-call aria-label="Menejerga qo‘ng‘iroq qilish"><svg class="ic"><use href="#i-call"/></svg><span>+998 93 517 83 72</span></a>
       <button type="button" class="btn btn--sm js-open" data-i18n="cta_short">Bepul namoyish</button>
     </div>
   </div>
@@ -70,6 +72,7 @@
     <div class="hero__cta wrap">
       <button type="button" class="btn btn--lg js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button>
       <p class="note" data-i18n="hero_note">Sotib olish majburiy emas · Menejer tez orada qo‘ng‘iroq qiladi</p>
+      <a class="calllink" href="tel:+998935178372" data-call><svg class="ic"><use href="#i-call"/></svg><span><span data-i18n="call_or">Yoki hoziroq qo‘ng‘iroq qiling:</span> <b>+998 93 517 83 72</b></span></a>
     </div>
   </div>
   <div class="hero__more wrap">
@@ -278,7 +281,8 @@
     <details><summary data-i18n="q5">Parvarishi murakkabmi?</summary><p data-i18n="a5">Tozalab bo‘lgach suvni to‘kib, idishni chayib qo‘yish kifoya.</p></details>
     <details><summary data-i18n="q6">Kafolat bormi?</summary><p data-i18n="a6">Ha: 3 yillik to‘liq kafolat va 10 yil davomida xizmat ko‘rsatish.</p></details>
     <details><summary data-i18n="q7">Allergiyani davolaydimi?</summary><p data-i18n="a7">Yo‘q, changyutgich dori vositasi emas. U uydagi chang va allergenlarni kamaytirishga yordam beradi. Sog‘liq masalalarida shifokorga murojaat qiling.</p></details>
-    <div class="center"><button type="button" class="btn btn--lg js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button></div>
+    <div class="center"><button type="button" class="btn btn--lg js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button>
+      <a class="calllink calllink--dark" href="tel:+998935178372" data-call><svg class="ic"><use href="#i-call"/></svg><span><span data-i18n="call_lbl">Menejerga qo‘ng‘iroq qiling:</span> <b>+998 93 517 83 72</b></span></a></div>
   </div>
 </section>
 
@@ -289,6 +293,7 @@
     <div>
       <p class="foot__brand"><b>isroil</b> roboclean <i>Pro</i></p>
       <p class="small" data-i18n="ft_dealer">Aura kompaniyasining rasmiy dileri · Toshkent</p>
+      <p class="small"><a class="foot__tel" href="tel:+998935178372" data-call>+998 93 517 83 72</a></p>
     </div>
     <div class="foot__r">
       <p>© <span id="yr">2026</span> Isroil Roboclean Pro</p>
@@ -297,7 +302,10 @@
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><button type="button" class="btn btn--block js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button></div>
+<div class="sticky" id="sticky">
+  <a class="callfab" href="tel:+998935178372" data-call aria-label="Menejerga qo‘ng‘iroq qilish"><svg class="ic"><use href="#i-call"/></svg></a>
+  <button type="button" class="btn btn--block js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button>
+</div>
 
 <!-- MODAL FORM -->
 <dialog class="modal" id="modal" aria-labelledby="m-title">
@@ -364,6 +372,7 @@
       <span class="thanks__ic"><svg class="ic"><use href="#i-check"/></svg></span>
       <h2 data-i18n="t_h">Rahmat!</h2>
       <p id="t-p" data-i18n="t_p">Arizangiz qabul qilindi. Menejer tez orada siz bilan bog‘lanadi.</p>
+      <a class="calllink calllink--dark" href="tel:+998935178372" data-call><svg class="ic"><use href="#i-call"/></svg><span><span data-i18n="call_urgent">Shoshilinch bo‘lsa qo‘ng‘iroq qiling:</span> <b>+998 93 517 83 72</b></span></a>
       <button type="button" class="btn" id="t-close" data-i18n="t_close">Yopish</button>
     </div>
   </div>
