@@ -1,0 +1,424 @@
+(function () {
+  "use strict";
+  var CFG = window.SITE_CONFIG || {};
+
+  /* ---------- Русский перевод (узбекский текст берётся прямо из HTML) ---------- */
+  var RU = {
+    meta_title: "Isroil Roboclean Pro — бесплатная демонстрация | Ташкент",
+    dl_h: "Мы — официальный дилер компании Aura",
+    dl_p: "Получаем аппараты напрямую от компании, поэтому цены на уровне самой компании — самые выгодные.",
+    dl1_h: "3 года", dl1_p: "полная гарантия", dl2_h: "10 лет", dl2_p: "обслуживание", dl3_h: "Официально", dl3_p: "от дилера, оригинальный аппарат",
+    rv_h: "Что говорят клиенты",
+    ft_dealer: "Официальный дилер компании Aura · Ташкент",
+    cta_short: "Бесплатная демонстрация", cta_main: "Записаться на бесплатную демонстрацию", skip: "Перейти к содержимому",
+    hero_badge: "Ташкент и Ташкентская область · Бесплатная демонстрация",
+    hero_h1: "Пылесос, который очищает воздух через воду — бесплатно покажем в работе",
+    hero_sub: "Roboclean Pro: водяной фильтр, сепаратор и HEPA в одном аппарате. Пыль остаётся не в мешке, а в воде.",
+    hero_b1: "Очистка воздуха через воду", hero_b2: "Помогает уменьшить пыль и аллергены в доме", hero_b3: "Ионизация воздуха во время работы*",
+    hero_note: "Покупать не обязательно · Менеджер скоро перезвонит",
+    chip1: "Водяной фильтр", chip3: "Ионизация*",
+    tr1: "Полная гарантия 3 года", tr2: "Ташкент и область", tr3: "Покупать не обязательно", tr4: "Обслуживание 10 лет",
+    pr_h: "Вы убираете пыль или просто перемещаете её?",
+    pr_lead: "Обычный пылесос собирает крупный мусор, но самые мелкие частицы — пыль, пыльца, споры плесени — могут вернуться в воздух.",
+    pr1_h: "Мелкая пыль возвращается в воздух", pr1_p: "Вы закончили уборку, а пыль продолжает висеть в комнате.",
+    pr2_h: "Мешок и контейнер — склад пыли", pr2_p: "При опустошении пыль снова поднимается в воздух, а внутри накапливаются пыль и микробы.",
+    pr3_h: "Мощность падает", pr3_p: "По мере заполнения мешка сила всасывания обычного пылесоса снижается.",
+    pr_answer: "Пусть ребёнок спокойно играет на ковре — пыль оседает в воде, а не в воздухе.",
+    pr_answer2: "Пусть те, кто чувствителен к пыли, чувствуют себя дома легко, а вы — спокойно.",
+    vd_h: "Убедитесь своими глазами",
+    vd_lead: "Реальные тесты, без монтажа и спецэффектов. На демонстрации покажем такой же тест у вас.",
+    v3_h: "Тест с дымом и пылью", v3_p: "Как очищается воздух в стеклянном боксе",
+    v1_h: "Шерсть и мусор на ковре", v1_p: "Глубокая уборка в деле",
+    v2_h: "Пылесос Roboclean Pro", v2_p: "Устройство и возможности аппарата",
+    hw_h: "Как это работает", hw_lead: "Три шага — и воздух в комнате чище.",
+    hw1_h: "Пыль засасывается", hw1_p: "Аппарат затягивает пыль вместе с потоком воздуха.",
+    hw2_h: "Сепаратор + вода", hw2_p: "Быстро вращающийся сепаратор направляет пыль в воду — пыль остаётся в воде.",
+    hw3_h: "HEPA и чистый воздух", hw3_p: "Воздух, прошедший через HEPA-фильтр, возвращается в комнату.",
+    hw_extra: "Дополнительно: ионизация воздуха* во время работы и возможность добавить в воду эфирное масло для приятного аромата.",
+    bn_h: "Почему именно Roboclean Pro",
+    bn1_h: "Водяной фильтр", bn1_p: "Ни мешка, ни контейнера для пыли. После уборки просто выливаете воду — пыль не летает в воздухе.",
+    bn2_h: "Сепаратор + HEPA", bn2_p: "Помогает задерживать пыльцу, споры плесени, бактерии и жирную пыль.",
+    bn3_h: "Постоянная сила всасывания", bn3_p: "Мощность не падает по мере заполнения мешка — мешка просто нет.",
+    bn4_h: "Ионизация воздуха*", bn4_p: "Во время работы ионизирует воздух — в комнате ощущается лёгкость и свежесть.",
+    bn5_h: "Ароматный воздух", bn5_p: "Добавьте в воду эфирное масло — и дом наполнится приятным запахом.",
+    bn6_h: "Всё в одном аппарате", bn6_p: "Ковры, мягкая мебель, матрасы, подушки, игрушки, гладкие полы и сбор жидкостей.",
+    foot_star: "* По данным производителя.",
+    cm_h: "Обычный пылесос и Roboclean Pro", cm_c1: "Обычный пылесос",
+    cm_r1: "Где остаётся пыль", cm_a1: "В мешке или контейнере", cm_b1: "В воде",
+    cm_r2: "Мелкая пыль", cm_a2: "Может вернуться в воздух", cm_b2: "Задерживается сепаратором и HEPA",
+    cm_r3: "Сила всасывания", cm_a3: "Падает по мере заполнения", cm_b3: "Постоянная",
+    cm_r4: "Очистка", cm_a4: "Опустошение пыльного мешка", cm_b4: "Слить воду",
+    cm_r5: "Ионизация и аромат", cm_a5: "Нет", cm_b5: "Есть*",
+    fw_h: "Для кого",
+    fw1_h: "Семьи с маленькими детьми", fw1_p: "Ребёнок играет на полу — важно, чтобы пол и ковёр были чистыми.",
+    fw2_h: "Семьи, чувствительные к пыли", fw2_p: "Помогает уменьшить в доме пыль и пыльцу.",
+    fw3_h: "Владельцы питомцев", fw3_p: "Шерсть и запах — глубокая очистка ковров и мебели.",
+    fw4_h: "Ковры и мягкая мебель", fw4_p: "Для ковров, диванов, матрасов и подушек.",
+    fw5_h: "Пыльные районы", fw5_p: "Для тех, кто живёт рядом со стройкой или дорогой.",
+    dm_h: "Как проходит демонстрация",
+    dm1_h: "Оставляете номер", dm1_p: "Указываете имя, телефон и район — 30 секунд.",
+    dm2_h: "Менеджер перезванивает", dm2_p: "Согласует с вами удобное время и адрес.",
+    dm3_h: "Специалист показывает аппарат", dm3_p: "Вы своими глазами видите тесты и получаете ответы на вопросы.",
+    dm4_h: "Решение за вами", dm4_p: "Покупать не обязательно. Об условиях специалист расскажет на демонстрации.",
+    fq_h: "Частые вопросы",
+    q1: "Демонстрация правда бесплатная?", a1: "Да, полностью бесплатно и без каких-либо обязательств.",
+    q2: "Сколько это стоит?", a2: "О стоимости и условиях оплаты специалист расскажет на демонстрации — вы сначала увидите аппарат в работе и поймёте, за что платите.",
+    q3: "Сколько длится демонстрация?", a3: "Обычно около 20–30 минут.",
+    q4: "В каких районах вы работаете?", a4: "В городе Ташкенте и Ташкентской области.",
+    q5: "Сложно ухаживать?", a5: "После уборки достаточно вылить воду и сполоснуть ёмкость.",
+    q6: "Есть гарантия?", a6: "Да: полная гарантия 3 года и обслуживание в течение 10 лет.",
+    q7: "Он лечит аллергию?", a7: "Нет, пылесос не является лекарством. Он помогает уменьшить пыль и аллергены в доме. По вопросам здоровья обращайтесь к врачу.",
+    fn_h: "Увидьте разницу сами — демонстрация бесплатная",
+    fn_p: "Оставьте номер: менеджер перезвонит и согласует удобное время.",
+    legal: "Отправленные данные используются только для связи с вами.",
+    f_title: "Запись на бесплатную демонстрацию",
+    f_sub: "Оставьте данные — менеджер свяжется с вами и согласует удобное время.",
+    f_name: "Ваше имя", f_name_ph: "Например, Дилноза", f_err_name: "Введите имя (минимум 2 буквы)",
+    f_phone: "Ваш номер телефона", f_err_phone: "Введите номер полностью: 9 цифр, например 90 123 45 67",
+    f_region: "Где вы живёте?", f_city: "г. Ташкент", f_obl: "Ташкентская область", f_err_region: "Выберите город или область",
+    f_district: "Район / город <i>(необязательно)</i>",
+    f_home: "Что есть у вас дома? <i>(необязательно)</i>",
+    f_h1: "Маленькие дети", f_h2: "Чувствительность к пыли", f_h3: "Домашние животные", f_h4: "Ковры, мягкая мебель",
+    f_time: "Когда удобно позвонить? <i>(необязательно)</i>",
+    f_send: "Записаться на демонстрацию", f_err_send: "Заявка не отправлена. Проверьте интернет и попробуйте ещё раз.",
+    f_consent: "Нажимая «Записаться на демонстрацию», вы соглашаетесь на обработку ваших данных.",
+    t_h: "Спасибо!", t_p: "Заявка принята. Менеджер скоро свяжется с вами.", t_close: "Закрыть"
+  };
+
+  var DISTRICTS = {
+    city: [
+      ["Bektemir", "Бектемир"], ["Chilonzor", "Чиланзар"], ["Mirobod", "Миробод"], ["Mirzo Ulug‘bek", "Мирзо-Улугбек"],
+      ["Olmazor", "Алмазар"], ["Sergeli", "Сергели"], ["Shayxontohur", "Шайхантахур"], ["Uchtepa", "Учтепа"],
+      ["Yakkasaroy", "Яккасарай"], ["Yashnobod", "Яшнабад"], ["Yunusobod", "Юнусабад"], ["Yangihayot", "Янгихаёт"]
+    ],
+    oblast: [
+      ["Chirchiq", "Чирчик"], ["Yangiyo‘l", "Янгиюль"], ["Nurafshon", "Нурафшон"], ["Olmaliq", "Алмалык"], ["Angren", "Ангрен"],
+      ["Bekobod", "Бекабад"], ["Ohangaron", "Ахангаран"], ["Zangiota", "Зангиата"], ["Qibray", "Кибрай"], ["Toshkent tumani", "Ташкентский район"],
+      ["Piskent", "Пскент"], ["Parkent", "Паркент"], ["Chinoz", "Чиназ"], ["Oqqo‘rg‘on", "Аккурган"], ["Bo‘stonliq", "Бостанлык"],
+      ["Bo‘ka", "Бука"], ["Quyi Chirchiq", "Куйичирчик"], ["O‘rtachirchiq", "Уртачирчик"], ["Yuqori Chirchiq", "Юкоричирчик"]
+    ]
+  };
+  var PLACEHOLDER = { uz: "Tanlang", ru: "Выберите" };
+
+  var lang = "uz";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ---------- i18n ---------- */
+  var UZ = {}, UZ_PH = {};
+  $$("[data-i18n]").forEach(function (el) { var k = el.dataset.i18n; if (!(k in UZ)) UZ[k] = el.innerHTML; });
+  $$("[data-i18n-ph]").forEach(function (el) { UZ_PH[el.dataset.i18nPh] = el.getAttribute("placeholder"); });
+  var UZ_TITLE = document.title;
+
+  function setLang(l) {
+    lang = l === "ru" ? "ru" : "uz";
+    document.documentElement.lang = lang;
+    $$("[data-i18n]").forEach(function (el) {
+      var k = el.dataset.i18n;
+      var v = lang === "ru" ? RU[k] : UZ[k];
+      if (v != null) el.innerHTML = v;
+    });
+    $$("[data-i18n-ph]").forEach(function (el) {
+      var k = el.dataset.i18nPh;
+      var v = lang === "ru" ? RU[k] : UZ_PH[k];
+      if (v != null) el.setAttribute("placeholder", v);
+    });
+    document.title = lang === "ru" ? RU.meta_title : UZ_TITLE;
+    $$(".lang__b").forEach(function (b) { var on = b.dataset.lang === lang; b.classList.toggle("is-on", on); b.setAttribute("aria-pressed", on); });
+    $$(".vid video").forEach(function (v) { var c = v.parentNode.querySelector("figcaption b"); if (c) v.setAttribute("aria-label", c.textContent); });
+    $("#m-close").setAttribute("aria-label", lang === "ru" ? "Закрыть" : "Yopish");
+    fillDistricts();
+    renderReviews();
+    try { localStorage.setItem("aura_lang", lang); } catch (e) {}
+  }
+
+  /* ---------- Лента отзывов (только реальные; образцы — по ?demo=1) ---------- */
+  function renderReviews() {
+    var sec = $("#reviews"), rib = $("#ribbon"); if (!sec || !rib) return;
+    var demo = new URLSearchParams(location.search).get("demo") === "1";
+    var list = (window.REVIEWS || []).slice(), isDemo = false;
+    if (!list.length && demo) { list = (window.REVIEWS_DEMO || []).slice(); isDemo = true; }
+    if (!list.length) { sec.hidden = true; return; }
+    function card(r) {
+      var d = document.createElement("figure"); d.className = "rv";
+      var tag = isDemo ? '<span class="rv__tag">' + (lang === "ru" ? "ОБРАЗЕЦ" : "NAMUNA") + "</span>" : "";
+      var txt = lang === "ru" ? (r.ru || r.uz) : (r.uz || r.ru);
+      var nm = String(r.name || "?");
+      d.innerHTML = tag + "<p></p><figcaption class=\"rv__who\"><span class=\"rv__av\"></span><div><b></b><span></span></div></figcaption>";
+      d.querySelector("p").textContent = txt;
+      d.querySelector(".rv__av").textContent = nm.charAt(0).toUpperCase();
+      d.querySelector("b").textContent = nm;
+      d.querySelector(".rv__who span:last-child").textContent = r.city || "";
+      return d;
+    }
+    rib.innerHTML = "";
+    var rows = list.length > 3 ? 2 : 1, per = Math.ceil(list.length / rows);
+    for (var i = 0; i < rows; i++) {
+      var part = list.slice(i * per, (i + 1) * per); if (!part.length) part = list;
+      while (part.length < 5) part = part.concat(part);           // чтобы лента не «пустела»
+      var row = document.createElement("div"); row.className = "ribbon__row" + (i ? " ribbon__row--b" : "");
+      row.style.setProperty("--dur", Math.max(30, part.length * 8) + "s");
+      part.concat(part).forEach(function (r, k) { var c = card(r); if (k >= part.length) c.setAttribute("aria-hidden", "true"); row.appendChild(c); });
+      rib.appendChild(row);
+    }
+    sec.hidden = false;
+  }
+  $$(".lang__b").forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+
+  var saved = null;
+  try { saved = localStorage.getItem("aura_lang"); } catch (e) {}
+  var urlLang = new URLSearchParams(location.search).get("lang");
+  var start = urlLang || saved || CFG.DEFAULT_LANG || "uz";
+  var modal, form, thanks, sticky; // объявлены до первого setLang
+  setLang(start);
+  $("#yr").textContent = new Date().getFullYear();
+
+  /* ---------- UTM / источник ---------- */
+  var track = {};
+  (function () {
+    var p = new URLSearchParams(location.search);
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "fbclid"].forEach(function (k) {
+      if (p.get(k)) track[k] = p.get(k);
+    });
+    try {
+      if (Object.keys(track).length) sessionStorage.setItem("aura_utm", JSON.stringify(track));
+      else track = JSON.parse(sessionStorage.getItem("aura_utm") || "{}");
+    } catch (e) {}
+  })();
+  function cookie(n) { var m = document.cookie.match(new RegExp("(?:^|; )" + n + "=([^;]*)")); return m ? decodeURIComponent(m[1]) : ""; }
+
+  /* ---------- Meta Pixel ---------- */
+  function fbq() { if (window.fbq) window.fbq.apply(null, arguments); }
+  if (CFG.PIXEL_ID) {
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = [];
+      t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+    }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", CFG.PIXEL_ID); fbq("track", "PageView");
+  }
+
+  /* ---------- Модальное окно ---------- */
+  modal = $("#modal"); form = $("#lead-form"); thanks = $("#thanks"); sticky = $("#sticky");
+  fillDistricts();
+  function openModal(src) {
+    form.hidden = false; thanks.hidden = true; $("#f-error").hidden = true;
+    form.dataset.src = src || "";
+    if (!modal.open) modal.showModal();
+    document.body.classList.add("lock");
+    setTimeout(function () { form.elements.name.focus({ preventScroll: true }); }, 50);
+    fbq("trackCustom", "OpenForm");
+  }
+  function closeModal() { if (modal.open) modal.close(); }
+  modal.addEventListener("close", function () { document.body.classList.remove("lock"); });
+  modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+  $("#m-close").addEventListener("click", closeModal);
+  $("#t-close").addEventListener("click", closeModal);
+  $$(".js-open").forEach(function (b, i) {
+    b.addEventListener("click", function () {
+      var sec = b.closest("section,header,.sticky");
+      openModal(sec ? (sec.className.split(" ")[0] || sec.tagName.toLowerCase()) : "page");
+    });
+  });
+
+  /* Липкая кнопка на мобильном */
+  var topBar = $("#top"), waterBar = $("#water");
+  function stick() {
+    var y = window.scrollY, max = document.documentElement.scrollHeight - window.innerHeight;
+    sticky.classList.toggle("is-on", y > window.innerHeight * 0.85 && !modal.open);
+    topBar.classList.toggle("is-solid", y > 40);
+    waterBar.style.width = (max > 0 ? Math.min(100, (y / max) * 100) : 0) + "%";
+  }
+  window.addEventListener("scroll", stick, { passive: true }); stick();
+  modal.addEventListener("close", stick);
+
+  /* ---------- Hero: пыль втягивается в пылесос и оседает в воде ---------- */
+  (function dust() {
+    var box = $("#heroMedia"), cv = $("#dust");
+    if (!box || !cv || !cv.getContext) return;
+    var ctx = cv.getContext("2d");
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var IW = 1200, IH = 1600;
+    // точки на фото (доли изображения)
+    var INTAKE = [0.55, 0.575], VENT = [0.55, 0.43], TANK = { x0: 0.45, x1: 0.65, y0: 0.635, y1: 0.675 };
+    var W = 0, H = 0, dpr = 1, geo = {}, parts = [], running = false, vis = true, last = 0;
+
+    function pt(u, v) { return [geo.ox + u * geo.w, geo.oy + v * geo.h]; }
+    function resize() {
+      var r = box.getBoundingClientRect(); if (!r.width) return;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = r.width; H = r.height;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var s = Math.max(W / IW, H / IH);
+      geo = { w: IW * s, h: IH * s, ox: (W - IW * s) / 2, oy: (H - IH * s) / 2, s: s };
+      var n = Math.max(26, Math.min(64, Math.round(W * H / 14000)));
+      while (parts.length < n) parts.push(newDust(true));
+      parts.length = n;
+    }
+    function rnd(a, b) { return a + Math.random() * (b - a); }
+    function newDust(anywhere) {
+      return { k: "dust", x: rnd(0, W), y: anywhere ? rnd(H * 0.08, H * 0.62) : rnd(H * 0.05, H * 0.4), vx: rnd(-.12, .12), vy: rnd(-.05, .1),
+        r: rnd(1.6, 3.8), a: rnd(.6, 1), ph: rnd(0, 6.28), wait: rnd(1.5, 7) * (anywhere ? Math.random() : 1), pull: 0 };
+    }
+    function toBubble(p) {
+      var q = pt(rnd(TANK.x0, TANK.x1), rnd(TANK.y0, TANK.y1));
+      p.k = "bub"; p.x = q[0]; p.y = q[1]; p.vx = rnd(-.1, .1); p.vy = rnd(-.35, -.15); p.r = rnd(1.5, 3); p.a = .9; p.life = 0;
+    }
+    function step(p, dt) {
+      if (p.k === "dust") {
+        p.wait -= dt;
+        if (p.wait > 0) {                       // дрейф по воздуху
+          p.ph += dt * 1.2;
+          p.x += (p.vx + Math.sin(p.ph) * .12) * dt * 60; p.y += (p.vy + Math.cos(p.ph * .8) * .08) * dt * 60;
+          if (p.x < -10) p.x = W + 10; if (p.x > W + 10) p.x = -10;
+        } else {                                // втягивается в аппарат
+          var t = pt(INTAKE[0], INTAKE[1]), dx = t[0] - p.x, dy = t[1] - p.y, d = Math.hypot(dx, dy) || 1;
+          p.pull = Math.min(1, p.pull + dt * 0.9);
+          var sp = (1.2 + p.pull * 5) * dt * 60;
+          p.x += dx / d * sp + (-dy / d) * Math.sin(p.ph + d * .05) * .8; p.y += dy / d * sp + (dx / d) * Math.sin(p.ph + d * .05) * .8;
+          p.r *= 1 - dt * .25;
+          if (d < 9 * Math.max(geo.s * 1.2, .5) + 4) toBubble(p);
+        }
+      } else if (p.k === "bub") {
+        p.life += dt; p.x += p.vx * dt * 60; p.y += p.vy * dt * 60; p.a -= dt * .55;
+        if (p.a <= 0) { Object.assign(p, newDust(false)); }
+      } else if (p.k === "spark") {
+        p.life += dt; p.x += p.vx * dt * 60; p.y += p.vy * dt * 60; p.a -= dt * .45;
+        if (p.a <= 0) { var v = pt(VENT[0] + rnd(-.05, .05), VENT[1]); p.k = "spark"; p.x = v[0]; p.y = v[1]; p.vx = rnd(-.25, .25); p.vy = rnd(-.7, -.35); p.a = 1; p.r = rnd(1.2, 2.4); }
+      }
+    }
+    function draw(p) {
+      ctx.globalAlpha = Math.max(0, Math.min(1, p.a));
+      if (p.k === "dust") { ctx.fillStyle = "#EDE2CE"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); }
+      else if (p.k === "bub") { ctx.strokeStyle = "#7BE8F7"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.stroke(); }
+      else { ctx.fillStyle = "#D7F23D"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); }
+    }
+    function frame(ts) {
+      if (!running) return;
+      var dt = Math.min(.05, (ts - last) / 1000 || .016); last = ts;
+      ctx.clearRect(0, 0, W, H);
+      for (var i = 0; i < parts.length; i++) { step(parts[i], dt); draw(parts[i]); }
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(frame);
+    }
+    function start() { if (running || reduce || !vis || document.hidden) return; running = true; last = performance.now(); requestAnimationFrame(frame); }
+    function stop() { running = false; }
+    function init() {
+      resize();
+      // чистый воздух из верхнего отверстия
+      var v = pt(VENT[0], VENT[1]);
+      for (var i = 0; i < 7; i++) parts.push({ k: "spark", x: v[0] + rnd(-12, 12), y: v[1] - rnd(0, 80), vx: rnd(-.25, .25), vy: rnd(-.7, -.35), r: rnd(1.2, 2.4), a: rnd(.1, 1), life: 0 });
+      if (reduce) { ctx.clearRect(0, 0, W, H); parts.slice(0, 20).forEach(function (p) { if (p.k === "dust") draw(p); }); }
+      start();
+    }
+    var img = box.querySelector("img");
+    if (img.complete) init(); else img.addEventListener("load", init);
+    window.addEventListener("resize", function () { var had = running; resize(); if (reduce) { ctx.clearRect(0, 0, W, H); } if (had) start(); });
+    document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { vis = e[0].isIntersecting; vis ? start() : stop(); }).observe(box);
+  })();
+
+  /* Схема: анимировать только когда видна */
+  (function () {
+    var fig = $("#diagram"); if (!fig || !("IntersectionObserver" in window)) return;
+    var svg = fig.querySelector("svg"); svg.style.animationPlayState = "paused";
+    var els = $$("[class^=d-] , [class^=d-] circle, [class^=d-] path", fig);
+    function setState(s) { els.forEach(function (e) { e.style.animationPlayState = s; }); }
+    setState("paused");
+    new IntersectionObserver(function (e) { setState(e[0].isIntersecting ? "running" : "paused"); }, { threshold: .2 }).observe(fig);
+  })();
+
+  /* Одно видео за раз */
+  $$("video").forEach(function (v) {
+    v.addEventListener("play", function () { $$("video").forEach(function (o) { if (o !== v) o.pause(); }); });
+  });
+
+  /* ---------- Форма ---------- */
+  var phone = form.elements.phone;
+  phone.addEventListener("input", function () {
+    var d = phone.value.replace(/\D/g, "");
+    if (d.indexOf("998") === 0 && d.length > 9) d = d.slice(3);
+    d = d.slice(0, 9);
+    var o = d.slice(0, 2);
+    if (d.length > 2) o += " " + d.slice(2, 5);
+    if (d.length > 5) o += " " + d.slice(5, 7);
+    if (d.length > 7) o += " " + d.slice(7, 9);
+    phone.value = o;
+  });
+
+  function fillDistricts() {
+    if (!form) return;
+    var r = form.elements.region.value;
+    var wrap = $("#district-wrap"), sel = form.elements.district;
+    if (!r) { wrap.hidden = true; return; }
+    var cur = sel.value;
+    sel.innerHTML = "";
+    var o0 = document.createElement("option"); o0.value = ""; o0.textContent = "— " + PLACEHOLDER[lang] + " —"; sel.appendChild(o0);
+    DISTRICTS[r].forEach(function (d) {
+      var o = document.createElement("option"); o.value = d[0]; o.textContent = d[lang === "ru" ? 1 : 0]; sel.appendChild(o);
+    });
+    sel.value = cur; wrap.hidden = false;
+  }
+  $$("input[name=region]", form).forEach(function (r) { r.addEventListener("change", function () { form.elements.district.value = ""; fillDistricts(); mark(r.closest(".fld"), true); }); });
+
+  function mark(fld, ok) {
+    if (!fld) return;
+    fld.classList.toggle("bad", !ok);
+    var inp = fld.querySelector("input:not([type=radio]),select"); if (inp) inp.setAttribute("aria-invalid", !ok);
+  }
+  function validate() {
+    var ok = true, f = form.elements;
+    var nameOk = f.name.value.trim().length >= 2; mark(f.name.closest(".fld"), nameOk); ok = ok && nameOk;
+    var phOk = phone.value.replace(/\D/g, "").length === 9; mark(phone.closest(".fld"), phOk); ok = ok && phOk;
+    var rOk = !!f.region.value; mark($$("input[name=region]", form)[0].closest(".fld"), rOk); ok = ok && rOk;
+    if (!ok) { var b = $(".fld.bad input, .fld.bad select", form); if (b) b.focus(); }
+    return ok;
+  }
+  form.elements.name.addEventListener("input", function () { mark(this.closest(".fld"), true); });
+  phone.addEventListener("input", function () { mark(phone.closest(".fld"), true); });
+
+  function uuid() { return "e" + Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!validate()) return;
+    var f = form.elements, btn = $("#f-submit"), err = $("#f-error");
+    err.hidden = true;
+    var eventId = uuid();
+    var payload = {
+      name: f.name.value.trim(),
+      phone: "+998" + phone.value.replace(/\D/g, ""),
+      region: f.region.value,
+      district: f.district.value,
+      home: $$("input[name=home]:checked", form).map(function (c) { return c.value; }),
+      time: (form.querySelector("input[name=time]:checked") || {}).value || "",
+      website: f.website.value,
+      lang: lang,
+      source: form.dataset.src || "",
+      page: location.origin + location.pathname,
+      event_id: eventId,
+      fbp: cookie("_fbp"), fbc: cookie("_fbc"),
+      utm: track,
+      ua: navigator.userAgent
+    };
+    btn.disabled = true; btn.style.opacity = ".7";
+
+    var done = function () {
+      fbq("track", "Lead", {}, { eventID: eventId });
+      $("#t-p").innerHTML = (lang === "ru" ? RU.t_p : UZ.t_p);
+      form.hidden = true; thanks.hidden = false; form.reset(); fillDistricts();
+      btn.disabled = false; btn.style.opacity = "";
+    };
+    var fail = function () { err.hidden = false; btn.disabled = false; btn.style.opacity = ""; };
+
+    if (!CFG.LEAD_ENDPOINT) {
+      console.warn("[demo] LEAD_ENDPOINT не задан в config.js — заявка не отправлена, показан экран успеха.", payload);
+      return setTimeout(done, 400);
+    }
+    var ctl = new AbortController(), to = setTimeout(function () { ctl.abort(); }, 12000);
+    fetch(CFG.LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), signal: ctl.signal })
+      .then(function (r) { clearTimeout(to); return r.ok ? done() : fail(); })
+      .catch(function () { clearTimeout(to); fail(); });
+  });
+})();
