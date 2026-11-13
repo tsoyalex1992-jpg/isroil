@@ -9,6 +9,7 @@
     dl_p: "Получаем аппараты напрямую от компании, поэтому цены на уровне самой компании — самые выгодные.",
     dl1_h: "3 года", dl1_p: "полная гарантия", dl2_h: "10 лет", dl2_p: "обслуживание", dl3_h: "Официально", dl3_p: "от дилера, оригинальный аппарат",
     rv_h: "Что говорят клиенты",
+    call_or: "Или позвоните сейчас:", call_lbl: "Позвоните менеджеру:", call_urgent: "Если срочно, позвоните:",
     ft_dealer: "Официальный дилер компании Aura · Ташкент",
     cta_short: "Бесплатная демонстрация", cta_main: "Записаться на бесплатную демонстрацию", skip: "Перейти к содержимому",
     hero_badge: "Ташкент и Ташкентская область · Бесплатная демонстрация",
@@ -127,6 +128,7 @@
     $$(".lang__b").forEach(function (b) { var on = b.dataset.lang === lang; b.classList.toggle("is-on", on); b.setAttribute("aria-pressed", on); });
     $$(".vid video").forEach(function (v) { var c = v.parentNode.querySelector("figcaption b"); if (c) v.setAttribute("aria-label", c.textContent); });
     $("#m-close").setAttribute("aria-label", lang === "ru" ? "Закрыть" : "Yopish");
+    $$("[data-call][aria-label]").forEach(function (a) { a.setAttribute("aria-label", lang === "ru" ? "Позвонить менеджеру" : "Menejerga qo‘ng‘iroq qilish"); });
     fillDistricts();
     renderReviews();
     try { localStorage.setItem("aura_lang", lang); } catch (e) {}
@@ -328,6 +330,9 @@
     setState("paused");
     new IntersectionObserver(function (e) { setState(e[0].isIntersecting ? "running" : "paused"); }, { threshold: .2 }).observe(fig);
   })();
+
+  /* Клики «позвонить» → событие Contact в Meta */
+  $$("[data-call]").forEach(function (a) { a.addEventListener("click", function () { fbq("track", "Contact"); }); });
 
   /* Одно видео за раз */
   $$("video").forEach(function (v) {
