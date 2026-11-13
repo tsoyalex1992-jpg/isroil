@@ -2,7 +2,7 @@
 window.SITE_CONFIG = {
   // Адрес Cloudflare Worker, который пересылает заявки в Telegram (см. README-запуск.md)
   // Пример: "https://aura-lead.ВАШ-АККАУНТ.workers.dev"
-  LEAD_ENDPOINT: "",
+  LEAD_ENDPOINT: "/api/lead",
 
   // Meta Pixel ID (из Events Manager). Пусто = пиксель не подключается.
   PIXEL_ID: "",
