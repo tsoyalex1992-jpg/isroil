@@ -5,7 +5,7 @@ window.SITE_CONFIG = {
   LEAD_ENDPOINT: "/api/lead",
 
   // Meta Pixel ID (из Events Manager). Пусто = пиксель не подключается.
-  PIXEL_ID: "",
+  PIXEL_ID: "1517884383500468",
 
   // Язык по умолчанию: "uz" или "ru"
   DEFAULT_LANG: "uz"
