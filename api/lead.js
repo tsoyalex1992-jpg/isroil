@@ -4,6 +4,7 @@
 //   CHAT_ID    — id группы, например -1001234567890  (обязательно)
 //   THREAD_ID  — id темы в группе с Topics            (необязательно)
 //   PIXEL_ID, CAPI_TOKEN — Meta Conversions API       (необязательно)
+//   TEST_EVENT_CODE      — тестовый код Meta, только на время проверки
 const crypto = require("crypto");
 
 const REGION = { city: "Toshkent shahri", oblast: "Toshkent viloyati" };
@@ -29,18 +30,48 @@ async function sendTelegram(text) {
   return false;
 }
 
+// TEST_EVENT_CODE (необязательно) — код из Events Manager → «Тестовые события».
+// Пока он задан, события видны только во вкладке тестов. После проверки удалите переменную.
 async function sendCapi(d, ip, ua) {
-  if (!process.env.PIXEL_ID || !process.env.CAPI_TOKEN) return;
-  const user = { ph: [sha(d.phone.replace(/\D/g, ""))], fn: [sha(d.name.toLowerCase())], country: [sha("uz")] };
+  if (!process.env.PIXEL_ID || !process.env.CAPI_TOKEN) {
+    console.warn("CAPI skipped: PIXEL_ID / CAPI_TOKEN не заданы в Vercel");
+    return;
+  }
+  if (!d.event_id) console.warn("CAPI: нет event_id от сайта — дедупликация с пикселем не сработает");
+
+  const user = {
+    ph: [sha(d.phone.replace(/\D/g, ""))],
+    fn: [sha(d.name.trim().toLowerCase())],
+    country: [sha("uz")],
+    external_id: [sha(d.phone.replace(/\D/g, ""))],
+  };
   if (ip) user.client_ip_address = ip;
-  if (ua) user.client_user_agent = ua;
-  if (d.fbp) user.fbp = d.fbp;
-  if (d.fbc) user.fbc = d.fbc;
+  if (ua) user.client_user_agent = String(ua).slice(0, 500);
+  if (d.fbp) user.fbp = String(d.fbp);
+  // _fbc нет в cookie, но человек пришёл по рекламе с fbclid — собираем fbc сами
+  const fbclid = d.utm && d.utm.fbclid;
+  if (d.fbc) user.fbc = String(d.fbc);
+  else if (fbclid) user.fbc = `fb.1.${Date.now()}.${String(fbclid).slice(0, 500)}`;
+
+  const event = {
+    event_name: "Lead",
+    event_time: Math.floor(Date.now() / 1000),
+    action_source: "website",
+    event_source_url: d.page,
+    user_data: user,
+  };
+  if (d.event_id) event.event_id = String(d.event_id);
+
+  const payload = { data: [event] };
+  if (process.env.TEST_EVENT_CODE) payload.test_event_code = process.env.TEST_EVENT_CODE;
+
   try {
-    await fetch(`https://graph.facebook.com/v19.0/${process.env.PIXEL_ID}/events?access_token=${process.env.CAPI_TOKEN}`, {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ data: [{ event_name: "Lead", event_time: Math.floor(Date.now() / 1000), event_id: d.event_id, action_source: "website", event_source_url: d.page, user_data: user }] }),
+    const r = await fetch(`https://graph.facebook.com/v23.0/${process.env.PIXEL_ID}/events?access_token=${process.env.CAPI_TOKEN}`, {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
     });
+    const txt = (await r.text()).replace(process.env.CAPI_TOKEN, "***");
+    if (!r.ok) console.error("CAPI HTTP", r.status, txt);
+    else console.log("CAPI ok", event.event_id || "-", txt);
   } catch (e) { console.error("CAPI error", String(e)); }
 }
 
@@ -81,6 +112,6 @@ module.exports = async (req, res) => {
   const ok = await sendTelegram(lines.join("\n"));
   if (!ok) return res.status(502).json({ ok: false, error: "telegram" });
 
-  await sendCapi(d, (req.headers["x-forwarded-for"] || "").split(",")[0].trim(), d.ua);
+  await sendCapi(d, (req.headers["x-forwarded-for"] || "").split(",")[0].trim(), d.ua || req.headers["user-agent"]);
   return res.status(200).json({ ok: true });
 };
