@@ -39,7 +39,7 @@ async function sendCapi(d, ip, ua) {
   try {
     await fetch(`https://graph.facebook.com/v19.0/${process.env.PIXEL_ID}/events?access_token=${process.env.CAPI_TOKEN}`, {
       method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ data: [{ test_event_code: TEST40064, event_time: Math.floor(Date.now() / 1000), event_id: d.event_id, action_source: "website", event_source_url: d.page, user_data: user }] }),
+      body: JSON.stringify({ data: [{ event_name: "Lead", event_time: Math.floor(Date.now() / 1000), event_id: d.event_id, action_source: "website", event_source_url: d.page, user_data: user }] }),
     });
   } catch (e) { console.error("CAPI error", String(e)); }
 }
