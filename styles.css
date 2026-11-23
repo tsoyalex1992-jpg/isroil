@@ -469,6 +469,13 @@ details[summary]:hover summary,details summary:hover{color:var(--pool-d)}
 .qa b{font-family:var(--f-head);font-size:20px;line-height:1.2;letter-spacing:-.02em}
 .ans{display:inline-flex;gap:10px;align-items:center;justify-self:start;background:#fff;border-radius:16px;padding:12px 16px;font-weight:700;color:var(--g);box-shadow:0 10px 24px -16px rgba(7,59,63,.5)}
 .ans .ic{color:var(--pool-d);flex:none}
+.proofgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.proofgrid figure{margin:0;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 14px 28px -20px rgba(7,59,63,.55),0 0 0 1px var(--line)}
+.proofgrid img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.proofgrid video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;display:block}
+.proofgrid.is-single{grid-template-columns:minmax(0,340px);justify-content:center}
+.proofgrid figcaption{padding:10px 14px 12px;font-weight:700;font-size:14px;color:var(--g)}
+@media(min-width:760px){.proofgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
 .demo--solo{max-width:760px}
 .demo--solo .demo__txt{width:100%}
 @media(min-width:760px){
