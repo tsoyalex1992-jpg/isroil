@@ -10,13 +10,14 @@
     dl1_h: "3 года", dl1_p: "полная гарантия", dl2_h: "10 лет", dl2_p: "обслуживание", dl3_h: "Официально", dl3_p: "от дилера, оригинальный аппарат",
     rv_h: "Что говорят клиенты",
     call_or: "Или позвоните сейчас:", call_lbl: "Позвоните менеджеру:", call_urgent: "Если срочно, позвоните:",
+    pill_call: "Позвонить", pill_call2: "Позвоню сам", x_h: "Чтобы менеджер подготовился (необязательно)", x_send: "Отправить", x_ok: "Спасибо! Менеджер учтёт ваши ответы и скоро свяжется с вами.", f_r1: "Без обязательств", f_r2: "Без спама", f_r3: "Бесплатно",
     ft_dealer: "Официальный дилер компании Aura · Ташкент",
-    cta_short: "Бесплатная демонстрация", cta_main: "Записаться на бесплатную демонстрацию", skip: "Перейти к содержимому",
+    cta_short: "Узнать цену", cta_main: "Узнать цену", skip: "Перейти к содержимому",
     hero_badge: "Ташкент и Ташкентская область · Бесплатная демонстрация",
     hero_h1: "Пылесос, который очищает воздух через воду — бесплатно покажем в работе",
     hero_sub: "Roboclean Pro: водяной фильтр, сепаратор и HEPA в одном аппарате. Пыль остаётся не в мешке, а в воде.",
     hero_b1: "Очистка воздуха через воду", hero_b2: "Помогает уменьшить пыль и аллергены в доме", hero_b3: "Ионизация воздуха во время работы*",
-    hero_note: "Покупать не обязательно · Менеджер скоро перезвонит",
+    hero_note: "Бесплатно · Без обязательств · Менеджер скоро перезвонит",
     chip1: "Водяной фильтр", chip3: "Ионизация*",
     tr1: "Полная гарантия 3 года", tr2: "Ташкент и область", tr3: "Покупать не обязательно", tr4: "Обслуживание 10 лет",
     pr_h: "Вы убираете пыль или просто перемещаете её?",
@@ -57,13 +58,13 @@
     fw4_h: "Ковры и мягкая мебель", fw4_p: "Для ковров, диванов, матрасов и подушек.",
     fw5_h: "Пыльные районы", fw5_p: "Для тех, кто живёт рядом со стройкой или дорогой.",
     dm_h: "Как проходит демонстрация",
-    dm1_h: "Оставляете номер", dm1_p: "Указываете имя, телефон и район — 30 секунд.",
+    dm1_h: "Оставляете номер", dm1_p: "Указываете телефон и район — 15 секунд.",
     dm2_h: "Менеджер перезванивает", dm2_p: "Согласует с вами удобное время и адрес.",
     dm3_h: "Специалист показывает аппарат", dm3_p: "Вы своими глазами видите тесты и получаете ответы на вопросы.",
-    dm4_h: "Решение за вами", dm4_p: "Покупать не обязательно. Об условиях специалист расскажет на демонстрации.",
+    dm4_h: "Решение за вами", dm4_p: "Покупать не обязательно. Демонстрация бесплатная.",
     fq_h: "Частые вопросы",
     q1: "Демонстрация правда бесплатная?", a1: "Да, полностью бесплатно и без каких-либо обязательств.",
-    q2: "Сколько это стоит?", a2: "О стоимости и условиях оплаты специалист расскажет на демонстрации — вы сначала увидите аппарат в работе и поймёте, за что платите.",
+    q2: "Сколько это стоит?", a2: "Менеджер перезвонит, объяснит цену и условия оплаты и согласует удобное время, чтобы вы увидели аппарат вживую.",
     q3: "Сколько длится демонстрация?", a3: "Обычно около 20–30 минут.",
     q4: "В каких районах вы работаете?", a4: "В городе Ташкенте и Ташкентской области.",
     q5: "Сложно ухаживать?", a5: "После уборки достаточно вылить воду и сполоснуть ёмкость.",
@@ -72,17 +73,17 @@
     fn_h: "Увидьте разницу сами — демонстрация бесплатная",
     fn_p: "Оставьте номер: менеджер перезвонит и согласует удобное время.",
     legal: "Отправленные данные используются только для связи с вами.",
-    f_title: "Запись на бесплатную демонстрацию",
-    f_sub: "Оставьте данные — менеджер свяжется с вами и согласует удобное время.",
-    f_name: "Ваше имя", f_name_ph: "Например, Дилноза", f_err_name: "Введите имя (минимум 2 буквы)",
+    f_title: "Узнайте цену и условия",
+    f_sub: "Оставьте номер — менеджер перезвонит и объяснит цену и условия. Это 15 секунд.",
+    f_name: "Ваше имя <i>(необязательно)</i>", f_name_ph: "Например, Дилноза", f_err_name: "Введите имя (минимум 2 буквы)",
     f_phone: "Ваш номер телефона", f_err_phone: "Введите номер полностью: 9 цифр, например 90 123 45 67",
     f_region: "Где вы живёте?", f_city: "г. Ташкент", f_obl: "Ташкентская область", f_err_region: "Выберите город или область",
-    f_district: "Район / город <i>(необязательно)</i>",
-    f_home: "Что есть у вас дома? <i>(необязательно)</i>",
+    f_district: "Район / город",
+    f_home: "Что есть у вас дома?",
     f_h1: "Маленькие дети", f_h2: "Чувствительность к пыли", f_h3: "Домашние животные", f_h4: "Ковры, мягкая мебель",
-    f_time: "Когда удобно позвонить? <i>(необязательно)</i>",
-    f_send: "Записаться на демонстрацию", f_err_send: "Заявка не отправлена. Проверьте интернет и попробуйте ещё раз.",
-    f_consent: "Нажимая «Записаться на демонстрацию», вы соглашаетесь на обработку ваших данных.",
+    f_time: "Когда удобно позвонить?",
+    f_send: "Пусть менеджер перезвонит", f_err_send: "Заявка не отправлена. Проверьте интернет и попробуйте ещё раз.",
+    f_consent: "Нажимая «Пусть менеджер перезвонит», вы соглашаетесь на обработку ваших данных.",
     t_h: "Спасибо!", t_p: "Заявка принята. Менеджер скоро свяжется с вами.", t_close: "Закрыть"
   };
 
@@ -171,7 +172,8 @@
   try { saved = localStorage.getItem("aura_lang"); } catch (e) {}
   var urlLang = new URLSearchParams(location.search).get("lang");
   var start = urlLang || saved || CFG.DEFAULT_LANG || "uz";
-  var modal, form, thanks, sticky; // объявлены до первого setLang
+  document.documentElement.classList.add("js");
+  var modal, form, thanks, sticky, extra;// объявлены до первого setLang
   setLang(start);
   $("#yr").textContent = new Date().getFullYear();
 
@@ -201,14 +203,14 @@
   }
 
   /* ---------- Модальное окно ---------- */
-  modal = $("#modal"); form = $("#lead-form"); thanks = $("#thanks"); sticky = $("#sticky");
+  modal = $("#modal"); extra = $("#extra-form"); form = $("#lead-form"); thanks = $("#thanks"); sticky = $("#sticky");
   fillDistricts();
   function openModal(src) {
     form.hidden = false; thanks.hidden = true; $("#f-error").hidden = true;
     form.dataset.src = src || "";
     if (!modal.open) modal.showModal();
     document.body.classList.add("lock");
-    setTimeout(function () { form.elements.name.focus({ preventScroll: true }); }, 50);
+    setTimeout(function () { form.elements.phone.focus({ preventScroll: true }); }, 60);
     fbq("trackCustom", "OpenForm");
   }
   function closeModal() { if (modal.open) modal.close(); }
@@ -292,9 +294,9 @@
     }
     function draw(p) {
       ctx.globalAlpha = Math.max(0, Math.min(1, p.a));
-      if (p.k === "dust") { ctx.fillStyle = "#EDE2CE"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); }
-      else if (p.k === "bub") { ctx.strokeStyle = "#7BE8F7"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.stroke(); }
-      else { ctx.fillStyle = "#D7F23D"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); }
+      if (p.k === "dust") { ctx.fillStyle = "#FBE4D5"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); }
+      else if (p.k === "bub") { ctx.strokeStyle = "#8BEAE2"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.stroke(); }
+      else { ctx.fillStyle = "#FFC9AB"; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill(); }
     }
     function frame(ts) {
       if (!running) return;
@@ -332,7 +334,7 @@
   })();
 
   /* Клики «позвонить» → событие Contact в Meta */
-  $$("[data-call]").forEach(function (a) { a.addEventListener("click", function () { fbq("track", "Contact"); }); });
+  $$("[data-call],[data-tg]").forEach(function (a) { a.addEventListener("click", function () { fbq("track", "Contact"); }); });
 
   /* Одно видео за раз */
   $$("video").forEach(function (v) {
@@ -352,20 +354,20 @@
     phone.value = o;
   });
 
+  var leadRegion = "", leadPhone = "", leadSrc = "";
   function fillDistricts() {
-    if (!form) return;
-    var r = form.elements.region.value;
-    var wrap = $("#district-wrap"), sel = form.elements.district;
-    if (!r) { wrap.hidden = true; return; }
+    if (!extra) return;
+    var wrap = $("#district-wrap"), sel = extra.elements.district;
+    if (!leadRegion) { wrap.hidden = true; return; }
     var cur = sel.value;
     sel.innerHTML = "";
     var o0 = document.createElement("option"); o0.value = ""; o0.textContent = "— " + PLACEHOLDER[lang] + " —"; sel.appendChild(o0);
-    DISTRICTS[r].forEach(function (d) {
+    DISTRICTS[leadRegion].forEach(function (d) {
       var o = document.createElement("option"); o.value = d[0]; o.textContent = d[lang === "ru" ? 1 : 0]; sel.appendChild(o);
     });
     sel.value = cur; wrap.hidden = false;
   }
-  $$("input[name=region]", form).forEach(function (r) { r.addEventListener("change", function () { form.elements.district.value = ""; fillDistricts(); mark(r.closest(".fld"), true); }); });
+  $$("input[name=region]", form).forEach(function (r) { r.addEventListener("change", function () { mark(r.closest(".fld"), true); }); });
 
   function mark(fld, ok) {
     if (!fld) return;
@@ -374,56 +376,98 @@
   }
   function validate() {
     var ok = true, f = form.elements;
-    var nameOk = f.name.value.trim().length >= 2; mark(f.name.closest(".fld"), nameOk); ok = ok && nameOk;
     var phOk = phone.value.replace(/\D/g, "").length === 9; mark(phone.closest(".fld"), phOk); ok = ok && phOk;
     var rOk = !!f.region.value; mark($$("input[name=region]", form)[0].closest(".fld"), rOk); ok = ok && rOk;
     if (!ok) { var b = $(".fld.bad input, .fld.bad select", form); if (b) b.focus(); }
     return ok;
   }
-  form.elements.name.addEventListener("input", function () { mark(this.closest(".fld"), true); });
   phone.addEventListener("input", function () { mark(phone.closest(".fld"), true); });
 
   function uuid() { return "e" + Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
 
+  function send(payload, ok, bad) {
+    if (!CFG.LEAD_ENDPOINT) {
+      console.warn("[demo] LEAD_ENDPOINT не задан в config.js — данные не отправлены.", payload);
+      return setTimeout(ok, 400);
+    }
+    var ctl = new AbortController(), to = setTimeout(function () { ctl.abort(); }, 12000);
+    fetch(CFG.LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), signal: ctl.signal })
+      .then(function (r) { clearTimeout(to); return r.ok ? ok() : bad(); })
+      .catch(function () { clearTimeout(to); bad(); });
+  }
+  function base() {
+    return { lang: lang, source: leadSrc, page: location.origin + location.pathname, fbp: cookie("_fbp"), fbc: cookie("_fbc"), utm: track, ua: navigator.userAgent };
+  }
+
+  /* Шаг 1: телефон + регион (имя необязательно) */
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (!validate()) return;
     var f = form.elements, btn = $("#f-submit"), err = $("#f-error");
     err.hidden = true;
+    leadSrc = form.dataset.src || "";
     var eventId = uuid();
-    var payload = {
-      name: f.name.value.trim(),
-      phone: "+998" + phone.value.replace(/\D/g, ""),
-      region: f.region.value,
-      district: f.district.value,
-      home: $$("input[name=home]:checked", form).map(function (c) { return c.value; }),
-      time: (form.querySelector("input[name=time]:checked") || {}).value || "",
-      website: f.website.value,
-      lang: lang,
-      source: form.dataset.src || "",
-      page: location.origin + location.pathname,
-      event_id: eventId,
-      fbp: cookie("_fbp"), fbc: cookie("_fbc"),
-      utm: track,
-      ua: navigator.userAgent
-    };
+    var payload = base();
+    payload.name = f.name.value.trim();
+    payload.phone = "+998" + phone.value.replace(/\D/g, "");
+    payload.region = f.region.value;
+    payload.website = f.website.value;
+    payload.event_id = eventId;
     btn.disabled = true; btn.style.opacity = ".7";
 
-    var done = function () {
+    send(payload, function () {
+      leadRegion = payload.region; leadPhone = payload.phone;
       fbq("track", "Lead", {}, { eventID: eventId });
       $("#t-p").innerHTML = (lang === "ru" ? RU.t_p : UZ.t_p);
-      form.hidden = true; thanks.hidden = false; form.reset(); fillDistricts();
+      extra.hidden = false; extra.reset(); fillDistricts();
+      form.hidden = true; thanks.hidden = false; form.reset();
       btn.disabled = false; btn.style.opacity = "";
-    };
-    var fail = function () { err.hidden = false; btn.disabled = false; btn.style.opacity = ""; };
-
-    if (!CFG.LEAD_ENDPOINT) {
-      console.warn("[demo] LEAD_ENDPOINT не задан в config.js — заявка не отправлена, показан экран успеха.", payload);
-      return setTimeout(done, 400);
-    }
-    var ctl = new AbortController(), to = setTimeout(function () { ctl.abort(); }, 12000);
-    fetch(CFG.LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), signal: ctl.signal })
-      .then(function (r) { clearTimeout(to); return r.ok ? done() : fail(); })
-      .catch(function () { clearTimeout(to); fail(); });
+    }, function () { err.hidden = false; btn.disabled = false; btn.style.opacity = ""; });
   });
+
+  /* Шаг 2: необязательные уточнения (заявка уже отправлена) */
+  extra.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var btn = $("#x-submit"), f = extra.elements;
+    var payload = base();
+    payload.type = "extra"; payload.phone = leadPhone; payload.region = leadRegion;
+    payload.district = f.district.value;
+    payload.home = $$("input[name=home]:checked", extra).map(function (c) { return c.value; });
+    payload.time = (extra.querySelector("input[name=time]:checked") || {}).value || "";
+    btn.disabled = true;
+    var finish = function () {
+      btn.disabled = false; extra.hidden = true;
+      $("#t-p").innerHTML = (lang === "ru" ? RU.x_ok : UZ.x_ok);
+    };
+    send(payload, finish, finish);
+  });
+
+  /* ---------- Анимации: появление блоков при прокрутке ---------- */
+  (function reveal() {
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !("IntersectionObserver" in window)) return;
+    var groups = [
+      [".sec h2, .sec .sec__lead, .dealer h2, .dealer p, .answer, .answer2, .extra, .foot, .reviews .wrap", ""],
+      [".rows li, .who li, .flow li, .line li, .bento .t, .dealer__list li, details, .cmp__r", ""],
+      [".how__fig", "r--s"], [".demo__pic", "r--l"], [".facts__in, .cmp, .center", ""]
+    ];
+    var seen = new Set(), els = [];
+    groups.forEach(function (g) {
+      $$(g[0]).forEach(function (el) {
+        if (seen.has(el) || el.closest(".hero")) return; seen.add(el);
+        var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+        el.classList.add("r"); if (g[1]) el.classList.add(g[1]);
+        el.style.setProperty("--rd", (Math.min(i, 5) * 0.09) + "s");
+        els.push(el);
+      });
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target; io.unobserve(el); el.classList.add("in");
+        setTimeout(function () { el.classList.remove("r", "in", "r--o", "r--s", "r--l"); el.style.removeProperty("--rd"); }, 1600);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  })();
 })();

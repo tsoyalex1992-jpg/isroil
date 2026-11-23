@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title data-i18n="meta_title">Isroil Roboclean Pro — bepul namoyish | Toshkent</title>
 <meta name="description" content="Suv orqali havoni tozalaydigan Aura Roboclean Pro changyutgichi. Toshkent shahri va viloyatida bepul namoyish — sotib olish majburiy emas.">
-<meta name="theme-color" content="#0F1619">
+<meta name="theme-color" content="#073B3F">
 <meta property="og:title" content="Isroil Roboclean Pro — bepul namoyish">
 <meta property="og:description" content="Suv filtri, separator va HEPA bir qurilmada. Toshkent shahri va viloyatida bepul namoyish.">
 <meta property="og:image" content="assets/img/product-pool.jpg">
@@ -39,6 +39,7 @@
   <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.500 4.500 4.500L19 7.500" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-no" viewBox="0 0 24 24"><path d="m7 7 10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"/></symbol>
   <symbol id="i-call" viewBox="0 0 24 24"><path d="M6.600 3.500h3l1.500 4-2 1.500a11 11 0 0 0 5.500 5.500l1.500-2 4 1.500v3a2 2 0 0 1-2 2A15.500 15.500 0 0 1 4.600 5.500a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.900" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 24 24"><path d="M21 4.200 3.600 10.900c-.9.400-.9 1 0 1.300l4.400 1.400 1.700 5.200c.2.600.5.700.9.400l2.500-2 4.600 3.400c.8.500 1.400.2 1.600-.8L22 5.300c.3-1.200-.5-1.700-1-1.100ZM9 13.300l8.600-5.400c.4-.3.800-.1.500.2L11 14.500l-.3 3.200L9 13.300Z" fill="currentColor"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"/></symbol>
 </svg>
 
@@ -55,7 +56,8 @@
         <button type="button" class="lang__b" data-lang="ru">RU</button>
       </div>
       <a class="callbtn" href="tel:+998935178372" data-call aria-label="Menejerga qo‘ng‘iroq qilish"><svg class="ic"><use href="#i-call"/></svg><span>+998 93 517 83 72</span></a>
-      <button type="button" class="btn btn--sm js-open" data-i18n="cta_short">Bepul namoyish</button>
+      <a class="callbtn callbtn--tg" href="https://t.me/ISROILAZ" target="_blank" rel="noopener" data-tg aria-label="Telegramda yozish"><svg class="ic"><use href="#i-tg"/></svg><span>Telegram</span></a>
+      <button type="button" class="btn btn--sm js-open" data-i18n="cta_short">Narxni bilish</button>
     </div>
   </div>
   <div class="top__water" id="water" aria-hidden="true"></div>
@@ -76,9 +78,12 @@
       <h1 data-i18n="hero_h1">Havoni suv orqali tozalaydigan changyutgich — sizga bepul ko‘rsatib beramiz</h1>
     </div>
     <div class="hero__cta wrap">
-      <button type="button" class="btn btn--lg js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button>
-      <p class="note" data-i18n="hero_note">Sotib olish majburiy emas · Menejer tez orada qo‘ng‘iroq qiladi</p>
-      <a class="calllink" href="tel:+998935178372" data-call><svg class="ic"><use href="#i-call"/></svg><span><span data-i18n="call_or">Yoki hoziroq qo‘ng‘iroq qiling:</span> <b>+998 93 517 83 72</b></span></a>
+      <button type="button" class="btn btn--lg js-open" data-i18n="cta_main">Narxni bilish</button>
+      <p class="note" data-i18n="hero_note">Bepul · Majburiyatsiz · Menejer tez orada qo‘ng‘iroq qiladi</p>
+      <div class="contacts">
+        <a class="pill" href="tel:+998935178372" data-call><svg class="ic"><use href="#i-call"/></svg><span data-i18n="pill_call">Qo‘ng‘iroq</span></a>
+        <a class="pill" href="https://t.me/ISROILAZ" target="_blank" rel="noopener" data-tg><svg class="ic"><use href="#i-tg"/></svg><span>Telegram</span></a>
+      </div>
     </div>
   </div>
   <div class="hero__more wrap">
@@ -136,7 +141,7 @@
       <figcaption><b data-i18n="v2_h">Roboclean Pro qurilmasi</b><span data-i18n="v2_p">Uskuna va uning imkoniyatlari</span></figcaption>
     </figure>
   </div>
-  <div class="wrap center"><button type="button" class="btn js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button></div>
+  <div class="wrap center"><button type="button" class="btn js-open" data-i18n="cta_main">Narxni bilish</button></div>
 </section>
 
 <!-- 4. КАК РАБОТАЕТ: анимированная схема -->
@@ -148,7 +153,7 @@
       <ol class="flow">
         <li><span class="num num--dust">1</span><div><h3 data-i18n="hw1_h">Chang so‘riladi</h3><p data-i18n="hw1_p">Qurilma changni havo oqimi bilan birga tortadi.</p></div></li>
         <li><span class="num num--pool">2</span><div><h3 data-i18n="hw2_h">Separator + suv</h3><p data-i18n="hw2_p">Tez aylanuvchi separator changni suvga yo‘naltiradi — chang suvda qoladi.</p></div></li>
-        <li><span class="num num--lime">3</span><div><h3 data-i18n="hw3_h">HEPA va toza havo</h3><p data-i18n="hw3_p">HEPA filtrdan o‘tgan havo xonaga qaytadi.</p></div></li>
+        <li><span class="num num--peach">3</span><div><h3 data-i18n="hw3_h">HEPA va toza havo</h3><p data-i18n="hw3_p">HEPA filtrdan o‘tgan havo xonaga qaytadi.</p></div></li>
       </ol>
       <p class="extra"><svg class="ic"><use href="#i-spark"/></svg><span data-i18n="hw_extra">Qo‘shimcha: ishlash vaqtida havo ionizatsiyasi* va suvga efir moyi qo‘shib xushbo‘y hid berish imkoniyati.</span></p>
     </div>
@@ -156,35 +161,35 @@
       <svg viewBox="0 0 360 440" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <clipPath id="tankClip"><rect x="104" y="288" width="152" height="86" rx="10"/></clipPath>
-          <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3FD6EC"/><stop offset="1" stop-color="#0098B4"/></linearGradient>
+          <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5FD8CF"/><stop offset="1" stop-color="#139A94"/></linearGradient>
         </defs>
         <!-- корпус -->
-        <path d="M128 70h104l30 214c2 14-4 24-18 24H116c-14 0-20-10-18-24L128 70Z" fill="#1D2A30" stroke="#33454D" stroke-width="2"/>
+        <path d="M128 70h104l30 214c2 14-4 24-18 24H116c-14 0-20-10-18-24L128 70Z" fill="#0E5359" stroke="#2C7E84" stroke-width="2"/>
         <!-- HEPA -->
         <g class="d-hepa">
-          <rect x="140" y="84" width="80" height="46" rx="6" fill="#0F1619" stroke="#D7F23D" stroke-width="2"/>
-          <path d="M150 94v26M160 94v26M170 94v26M180 94v26M190 94v26M200 94v26M210 94v26" stroke="#D7F23D" stroke-width="2" opacity=".75"/>
+          <rect x="140" y="84" width="80" height="46" rx="6" fill="#073B3F" stroke="#FFC9AB" stroke-width="2"/>
+          <path d="M150 94v26M160 94v26M170 94v26M180 94v26M190 94v26M200 94v26M210 94v26" stroke="#FFC9AB" stroke-width="2" opacity=".75"/>
         </g>
         <!-- сепаратор -->
-        <circle cx="180" cy="206" r="40" fill="#0F1619" stroke="#00B4CE" stroke-width="2"/>
-        <g class="d-sep" transform-origin="180 206"><path d="M180 176v60M150 206h60M159 185l42 42M201 185l-42 42" stroke="#00B4CE" stroke-width="3" stroke-linecap="round"/></g>
+        <circle cx="180" cy="206" r="40" fill="#073B3F" stroke="#2BBDB4" stroke-width="2"/>
+        <g class="d-sep" transform-origin="180 206"><path d="M180 176v60M150 206h60M159 185l42 42M201 185l-42 42" stroke="#2BBDB4" stroke-width="3" stroke-linecap="round"/></g>
         <!-- вода -->
-        <rect x="104" y="288" width="152" height="86" rx="10" fill="#0A2A33" stroke="#00B4CE" stroke-width="2"/>
+        <rect x="104" y="288" width="152" height="86" rx="10" fill="#06474D" stroke="#2BBDB4" stroke-width="2"/>
         <g clip-path="url(#tankClip)"><path class="d-wave" d="M60 312c20-9 40-9 60 0s40 9 60 0 40-9 60 0 40 9 60 0 40-9 60 0V380H60Z" fill="url(#wg)" opacity=".9"/></g>
         <!-- впуск -->
-        <path d="M20 206h100" stroke="#33454D" stroke-width="14" stroke-linecap="round"/>
+        <path d="M20 206h100" stroke="#2C7E84" stroke-width="14" stroke-linecap="round"/>
         <!-- пыль на входе -->
-        <g class="d-in" fill="#D9C8A4"><circle cx="24" cy="202" r="4"/><circle cx="24" cy="210" r="3"/><circle cx="24" cy="206" r="2.500"/><circle cx="24" cy="199" r="2"/><circle cx="24" cy="212" r="2"/></g>
+        <g class="d-in" fill="#F2C3A7"><circle cx="24" cy="202" r="4"/><circle cx="24" cy="210" r="3"/><circle cx="24" cy="206" r="2.500"/><circle cx="24" cy="199" r="2"/><circle cx="24" cy="212" r="2"/></g>
         <!-- падение в воду -->
-        <g class="d-fall" fill="#D9C8A4"><circle cx="160" cy="250" r="3"/><circle cx="180" cy="248" r="3.500"/><circle cx="200" cy="250" r="3"/></g>
+        <g class="d-fall" fill="#F2C3A7"><circle cx="160" cy="250" r="3"/><circle cx="180" cy="248" r="3.500"/><circle cx="200" cy="250" r="3"/></g>
         <!-- чистый воздух -->
-        <path d="M180 70V28" stroke="#33454D" stroke-width="14" stroke-linecap="round"/>
-        <g class="d-out" fill="#D7F23D"><circle cx="176" cy="60" r="3.500"/><circle cx="186" cy="60" r="3"/><circle cx="181" cy="60" r="2.500"/></g>
+        <path d="M180 70V28" stroke="#2C7E84" stroke-width="14" stroke-linecap="round"/>
+        <g class="d-out" fill="#FFC9AB"><circle cx="176" cy="60" r="3.500"/><circle cx="186" cy="60" r="3"/><circle cx="181" cy="60" r="2.500"/></g>
         <!-- номера -->
         <g font-family="Geologica,sans-serif" font-weight="800" font-size="15" text-anchor="middle">
-          <circle cx="50" cy="168" r="14" fill="#D9C8A4"/><text x="50" y="173.500" fill="#0F1619">1</text>
-          <circle cx="300" cy="206" r="14" fill="#00B4CE"/><text x="300" y="211.500" fill="#0F1619">2</text>
-          <circle cx="300" cy="108" r="14" fill="#D7F23D"/><text x="300" y="113.500" fill="#0F1619">3</text>
+          <circle cx="50" cy="168" r="14" fill="#F2C3A7"/><text x="50" y="173.500" fill="#073B3F">1</text>
+          <circle cx="300" cy="206" r="14" fill="#2BBDB4"/><text x="300" y="211.500" fill="#073B3F">2</text>
+          <circle cx="300" cy="108" r="14" fill="#FFC9AB"/><text x="300" y="113.500" fill="#073B3F">3</text>
         </g>
       </svg>
     </div>
@@ -203,6 +208,7 @@
       <article class="t t--s"><svg class="ic ic--l"><use href="#i-leaf"/></svg><h3 data-i18n="bn5_h">Xushbo‘y havo</h3><p data-i18n="bn5_p">Suvga efir moyi qo‘shib, uyni yoqimli hid bilan to‘ldirish mumkin.</p></article>
       <article class="t t--wide t--l"><svg class="ic ic--l"><use href="#i-sofa"/></svg><h3 data-i18n="bn6_h">Hammasi bitta qurilmada</h3><p data-i18n="bn6_p">Gilam, yumshoq mebel, matras, yostiq, o‘yinchoqlar, silliq pollar va suyuqliklarni yig‘ish.</p></article>
     </div>
+    <div class="center center--tight"><button type="button" class="btn js-open" data-i18n="cta_main">Narxni bilish</button></div>
     <p class="foot" data-i18n="foot_star">* Ishlab chiqaruvchi ma’lumotlariga ko‘ra.</p>
   </div>
 </section>
@@ -258,12 +264,12 @@
     <div class="demo__txt">
       <h2 data-i18n="dm_h">Namoyish qanday o‘tadi</h2>
       <ol class="line">
-        <li><b data-i18n="dm1_h">Raqamingizni qoldirasiz</b><span data-i18n="dm1_p">Ism, telefon va hududni ko‘rsatasiz — 30 soniya.</span></li>
+        <li><b data-i18n="dm1_h">Raqamingizni qoldirasiz</b><span data-i18n="dm1_p">Telefon va hududni ko‘rsatasiz — 15 soniya.</span></li>
         <li><b data-i18n="dm2_h">Menejer qo‘ng‘iroq qiladi</b><span data-i18n="dm2_p">Sizga qulay vaqt va manzilni kelishib oladi.</span></li>
         <li><b data-i18n="dm3_h">Mutaxassis qurilmani ko‘rsatadi</b><span data-i18n="dm3_p">Sinovlarni o‘z ko‘zingiz bilan ko‘rasiz, savollaringizga javob olasiz.</span></li>
-        <li><b data-i18n="dm4_h">Qaror — sizniki</b><span data-i18n="dm4_p">Sotib olish majburiy emas. Shartlar haqida mutaxassis namoyishda aytadi.</span></li>
+        <li><b data-i18n="dm4_h">Qaror — sizniki</b><span data-i18n="dm4_p">Sotib olish majburiy emas. Namoyish bepul.</span></li>
       </ol>
-      <button type="button" class="btn js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button>
+      <button type="button" class="btn js-open" data-i18n="cta_main">Narxni bilish</button>
     </div>
   </div>
 </section>
@@ -281,14 +287,17 @@
   <div class="wrap wrap--n">
     <h2 data-i18n="fq_h">Ko‘p beriladigan savollar</h2>
     <details><summary data-i18n="q1">Namoyish haqiqatan bepulmi?</summary><p data-i18n="a1">Ha, to‘liq bepul va hech qanday majburiyatsiz.</p></details>
-    <details><summary data-i18n="q2">Narxi qancha?</summary><p data-i18n="a2">Narx va to‘lov shartlarini mutaxassis namoyish paytida aytib beradi — shunda nima uchun to‘lashingizni o‘z ko‘zingiz bilan ko‘rgan bo‘lasiz.</p></details>
+    <details><summary data-i18n="q2">Narxi qancha?</summary><p data-i18n="a2">Menejer qo‘ng‘iroq qilib, narx va to‘lov shartlarini tushuntiradi va qurilmani o‘z ko‘zingiz bilan ko‘rishingiz uchun qulay vaqtni kelishadi.</p></details>
     <details><summary data-i18n="q3">Namoyish qancha davom etadi?</summary><p data-i18n="a3">Odatda taxminan 20–30 daqiqa.</p></details>
     <details><summary data-i18n="q4">Qaysi hududlarda ishlaysizlar?</summary><p data-i18n="a4">Toshkent shahri va Toshkent viloyatida.</p></details>
     <details><summary data-i18n="q5">Parvarishi murakkabmi?</summary><p data-i18n="a5">Tozalab bo‘lgach suvni to‘kib, idishni chayib qo‘yish kifoya.</p></details>
     <details><summary data-i18n="q6">Kafolat bormi?</summary><p data-i18n="a6">Ha: 3 yillik to‘liq kafolat va 10 yil davomida xizmat ko‘rsatish.</p></details>
     <details><summary data-i18n="q7">Allergiyani davolaydimi?</summary><p data-i18n="a7">Yo‘q, changyutgich dori vositasi emas. U uydagi chang va allergenlarni kamaytirishga yordam beradi. Sog‘liq masalalarida shifokorga murojaat qiling.</p></details>
-    <div class="center"><button type="button" class="btn btn--lg js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button>
-      <a class="calllink calllink--dark" href="tel:+998935178372" data-call><svg class="ic"><use href="#i-call"/></svg><span><span data-i18n="call_lbl">Menejerga qo‘ng‘iroq qiling:</span> <b>+998 93 517 83 72</b></span></a></div>
+    <div class="center"><button type="button" class="btn btn--lg js-open" data-i18n="cta_main">Narxni bilish</button>
+      <div class="contacts contacts--c contacts--dark">
+        <a class="pill" href="tel:+998935178372" data-call><svg class="ic"><use href="#i-call"/></svg><span>+998 93 517 83 72</span></a>
+        <a class="pill" href="https://t.me/ISROILAZ" target="_blank" rel="noopener" data-tg><svg class="ic"><use href="#i-tg"/></svg><span>@ISROILAZ</span></a>
+      </div></div>
   </div>
 </section>
 
@@ -299,7 +308,7 @@
     <div>
       <p class="foot__brand"><b>isroil</b> roboclean <i>Pro</i></p>
       <p class="small" data-i18n="ft_dealer">Aura kompaniyasining rasmiy dileri · Toshkent</p>
-      <p class="small"><a class="foot__tel" href="tel:+998935178372" data-call>+998 93 517 83 72</a></p>
+      <p class="small"><a class="foot__tel" href="tel:+998935178372" data-call>+998 93 517 83 72</a> &nbsp; <a class="foot__tel" href="https://t.me/ISROILAZ" target="_blank" rel="noopener" data-tg>@ISROILAZ</a></p>
     </div>
     <div class="foot__r">
       <p>© <span id="yr">2026</span> Isroil Roboclean Pro</p>
@@ -310,23 +319,18 @@
 
 <div class="sticky" id="sticky">
   <a class="callfab" href="tel:+998935178372" data-call aria-label="Menejerga qo‘ng‘iroq qilish"><svg class="ic"><use href="#i-call"/></svg></a>
-  <button type="button" class="btn btn--block js-open" data-i18n="cta_main">Bepul namoyishga yozilish</button>
+  <a class="callfab callfab--tg" href="https://t.me/ISROILAZ" target="_blank" rel="noopener" data-tg aria-label="Telegramda yozish"><svg class="ic"><use href="#i-tg"/></svg></a>
+  <button type="button" class="btn btn--block js-open" data-i18n="cta_main">Narxni bilish</button>
 </div>
 
-<!-- MODAL FORM -->
+<!-- MODAL FORM: шаг 1 — только телефон и регион; шаг 2 (после отправки) — необязательные уточнения -->
 <dialog class="modal" id="modal" aria-labelledby="m-title">
   <div class="modal__box">
     <button type="button" class="modal__x" id="m-close" aria-label="Yopish"><svg class="ic"><use href="#i-x"/></svg></button>
 
     <form id="lead-form" novalidate>
-      <h2 id="m-title" data-i18n="f_title">Bepul namoyishga yozilish</h2>
-      <p class="modal__sub" data-i18n="f_sub">Ma’lumotlarni qoldiring — menejer siz bilan bog‘lanib, qulay vaqtni kelishadi.</p>
-
-      <label class="fld">
-        <span data-i18n="f_name">Ismingiz</span>
-        <input type="text" name="name" autocomplete="given-name" required maxlength="60" data-i18n-ph="f_name_ph" placeholder="Masalan, Dilnoza">
-        <small class="err" role="alert" data-i18n="f_err_name">Ismingizni kiriting (kamida 2 harf)</small>
-      </label>
+      <h2 id="m-title" data-i18n="f_title">Narx va shartlarni bilib oling</h2>
+      <p class="modal__sub" data-i18n="f_sub">Raqamingizni qoldiring — menejer qo‘ng‘iroq qilib, narx va shartlarni tushuntiradi. Bu 15 soniya.</p>
 
       <label class="fld">
         <span data-i18n="f_phone">Telefon raqamingiz</span>
@@ -343,43 +347,61 @@
         <small class="err" role="alert" data-i18n="f_err_region">Shahar yoki viloyatni tanlang</small>
       </fieldset>
 
-      <label class="fld" id="district-wrap" hidden>
-        <span data-i18n="f_district">Tuman / shahar <i>(ixtiyoriy)</i></span>
-        <select name="district"></select>
+      <label class="fld">
+        <span data-i18n="f_name">Ismingiz <i>(ixtiyoriy)</i></span>
+        <input type="text" name="name" autocomplete="given-name" maxlength="60" data-i18n-ph="f_name_ph" placeholder="Masalan, Dilnoza">
       </label>
-
-      <fieldset class="fld">
-        <legend data-i18n="f_home">Uyingizda nimalar bor? <i>(ixtiyoriy)</i></legend>
-        <div class="chips">
-          <label><input type="checkbox" name="home" value="Kichik bolalar"><span data-i18n="f_h1">Kichik bolalar</span></label>
-          <label><input type="checkbox" name="home" value="Changga/allergiyaga moyillik"><span data-i18n="f_h2">Changga sezgirlik</span></label>
-          <label><input type="checkbox" name="home" value="Uy hayvonlari"><span data-i18n="f_h3">Uy hayvonlari</span></label>
-          <label><input type="checkbox" name="home" value="Gilam/yumshoq mebel"><span data-i18n="f_h4">Gilam, yumshoq mebel</span></label>
-        </div>
-      </fieldset>
-
-      <fieldset class="fld">
-        <legend data-i18n="f_time">Qachon qo‘ng‘iroq qilsak qulay? <i>(ixtiyoriy)</i></legend>
-        <div class="seg seg--3">
-          <label><input type="radio" name="time" value="09-12"><span data-i18n="f_t1">09–12</span></label>
-          <label><input type="radio" name="time" value="12-17"><span data-i18n="f_t2">12–17</span></label>
-          <label><input type="radio" name="time" value="17-21"><span data-i18n="f_t3">17–21</span></label>
-        </div>
-      </fieldset>
 
       <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
 
-      <button type="submit" class="btn btn--block btn--lg" id="f-submit"><span data-i18n="f_send">Namoyishga yozilish</span></button>
+      <button type="submit" class="btn btn--block btn--lg" id="f-submit"><span data-i18n="f_send">Menejer qo‘ng‘iroq qilsin</span></button>
       <p class="form-err" id="f-error" role="alert" hidden data-i18n="f_err_send">Ariza yuborilmadi. Internetni tekshirib, qayta urinib ko‘ring.</p>
-      <p class="fine" data-i18n="f_consent">«Namoyishga yozilish» tugmasini bosib, ma’lumotlaringizni qayta ishlashga rozilik bildirasiz.</p>
+      <ul class="reassure">
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="f_r1">Majburiyat yo‘q</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="f_r2">Spam yo‘q</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="f_r3">Bepul</span></li>
+      </ul>
+      <p class="fine" data-i18n="f_consent">«Menejer qo‘ng‘iroq qilsin» tugmasini bosib, ma’lumotlaringizni qayta ishlashga rozilik bildirasiz.</p>
+      <div class="contacts contacts--c contacts--dark contacts--form">
+        <a class="pill" href="tel:+998935178372" data-call><svg class="ic"><use href="#i-call"/></svg><span data-i18n="pill_call2">Qo‘ng‘iroq qilaman</span></a>
+        <a class="pill" href="https://t.me/ISROILAZ" target="_blank" rel="noopener" data-tg><svg class="ic"><use href="#i-tg"/></svg><span>Telegram</span></a>
+      </div>
     </form>
 
+    <!-- Шаг 2: заявка уже отправлена, эти вопросы необязательные -->
     <div class="thanks" id="thanks" hidden>
       <span class="thanks__ic"><svg class="ic"><use href="#i-check"/></svg></span>
       <h2 data-i18n="t_h">Rahmat!</h2>
       <p id="t-p" data-i18n="t_p">Arizangiz qabul qilindi. Menejer tez orada siz bilan bog‘lanadi.</p>
-      <a class="calllink calllink--dark" href="tel:+998935178372" data-call><svg class="ic"><use href="#i-call"/></svg><span><span data-i18n="call_urgent">Shoshilinch bo‘lsa qo‘ng‘iroq qiling:</span> <b>+998 93 517 83 72</b></span></a>
-      <button type="button" class="btn" id="t-close" data-i18n="t_close">Yopish</button>
+      <span hidden data-i18n="x_ok">Rahmat! Menejer javoblaringizni hisobga oladi va tez orada bog‘lanadi.</span>
+
+      <form id="extra-form" class="extra-form" novalidate>
+        <p class="extra-form__h" data-i18n="x_h">Menejer aniqroq tayyorlansin (ixtiyoriy)</p>
+        <label class="fld" id="district-wrap" hidden>
+          <span data-i18n="f_district">Tuman / shahar</span>
+          <select name="district"></select>
+        </label>
+        <fieldset class="fld">
+          <legend data-i18n="f_home">Uyingizda nimalar bor?</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="home" value="Kichik bolalar"><span data-i18n="f_h1">Kichik bolalar</span></label>
+            <label><input type="checkbox" name="home" value="Changga/allergiyaga moyillik"><span data-i18n="f_h2">Changga sezgirlik</span></label>
+            <label><input type="checkbox" name="home" value="Uy hayvonlari"><span data-i18n="f_h3">Uy hayvonlari</span></label>
+            <label><input type="checkbox" name="home" value="Gilam/yumshoq mebel"><span data-i18n="f_h4">Gilam, yumshoq mebel</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="fld">
+          <legend data-i18n="f_time">Qachon qo‘ng‘iroq qilsak qulay?</legend>
+          <div class="seg seg--3">
+            <label><input type="radio" name="time" value="09-12"><span data-i18n="f_t1">09–12</span></label>
+            <label><input type="radio" name="time" value="12-17"><span data-i18n="f_t2">12–17</span></label>
+            <label><input type="radio" name="time" value="17-21"><span data-i18n="f_t3">17–21</span></label>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn--block" id="x-submit"><span data-i18n="x_send">Yuborish</span></button>
+      </form>
+
+      <button type="button" class="linkbtn" id="t-close" data-i18n="t_close">Yopish</button>
     </div>
   </div>
 </dialog>

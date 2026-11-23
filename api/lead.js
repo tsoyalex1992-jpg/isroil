@@ -41,10 +41,10 @@ async function sendCapi(d, ip, ua) {
 
   const user = {
     ph: [sha(d.phone.replace(/\D/g, ""))],
-    fn: [sha(d.name.trim().toLowerCase())],
     country: [sha("uz")],
     external_id: [sha(d.phone.replace(/\D/g, ""))],
   };
+  if (d.name && d.name !== "—") user.fn = [sha(d.name.trim().toLowerCase())];
   if (ip) user.client_ip_address = ip;
   if (ua) user.client_user_agent = String(ua).slice(0, 500);
   if (d.fbp) user.fbp = String(d.fbp);
@@ -86,10 +86,24 @@ module.exports = async (req, res) => {
 
   if (d.website) return res.status(200).json({ ok: true }); // honeypot: ботам молча «успех»
 
+  // Шаг 2 формы: необязательные уточнения к уже принятой заявке
+  if (d.type === "extra") {
+    const ph = String(d.phone || "").replace(/\D/g, "");
+    if (!/^998\d{9}$/.test(ph)) return res.status(422).json({ ok: false, error: "invalid" });
+    const hasHome = Array.isArray(d.home) && d.home.length;
+    if (!d.district && !d.time && !hasHome) return res.status(200).json({ ok: true });
+    const rows = ["➕ <b>Уточнения к заявке</b>", `📞 +${ph}`];
+    if (REGION[d.region]) rows.push(`📍 ${REGION[d.region]}${d.district ? ", " + esc(String(d.district).slice(0, 60)) : ""}`);
+    if (hasHome) rows.push(`🏠 Дома: ${esc(d.home.slice(0, 6).join(", ").slice(0, 200))}`);
+    if (d.time) rows.push(`⏰ Удобно звонить: ${esc(String(d.time).slice(0, 20))}`);
+    await sendTelegram(rows.join("\n"));
+    return res.status(200).json({ ok: true });
+  }
+
   const name = String(d.name || "").trim().slice(0, 60);
   const digits = String(d.phone || "").replace(/\D/g, "");
-  if (name.length < 2 || !/^998\d{9}$/.test(digits) || !REGION[d.region]) return res.status(422).json({ ok: false, error: "invalid" });
-  d.name = name; d.phone = "+" + digits;
+  if ((name && name.length < 2) || !/^998\d{9}$/.test(digits) || !REGION[d.region]) return res.status(422).json({ ok: false, error: "invalid" });
+  d.name = name || "—"; d.phone = "+" + digits;
 
   const utm = d.utm && typeof d.utm === "object" ? d.utm : {};
   const utmLine = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
@@ -99,7 +113,7 @@ module.exports = async (req, res) => {
   const lines = [
     "🔥 <b>Новая заявка — Isroil Roboclean Pro</b>",
     "",
-    `👤 <b>Имя:</b> ${esc(name)}`,
+    `👤 <b>Имя:</b> ${esc(d.name)}`,
     `📞 <b>Телефон:</b> ${esc(d.phone)}`,
     `📍 <b>Регион:</b> ${REGION[d.region]}${d.district ? ", " + esc(String(d.district).slice(0, 60)) : ""}`,
   ];
