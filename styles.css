@@ -102,7 +102,7 @@ ul,ol{list-style:none}
 .facts__in{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:22px;box-shadow:0 24px 44px -22px rgba(7,59,63,.55),0 0 0 1px var(--line);padding:4px 20px;width:calc(100% - 32px)}
 .facts li{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;padding:16px 0;color:var(--g)}
 .facts li:nth-child(n+3){border-top:1px solid var(--line)}
-.hero__more{padding-bottom:20px}
+.hero__more{padding-bottom:44px}
 .facts .ic{color:var(--pool-d)}
 
 /* ---------- секции ---------- */
