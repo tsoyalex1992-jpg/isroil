@@ -95,7 +95,7 @@ module.exports = async (req, res) => {
     const rows = ["➕ <b>Уточнения к заявке</b>", `📞 +${ph}`];
     if (REGION[d.region]) rows.push(`📍 ${REGION[d.region]}${d.district ? ", " + esc(String(d.district).slice(0, 60)) : ""}`);
     if (hasHome) rows.push(`🏠 Дома: ${esc(d.home.slice(0, 6).join(", ").slice(0, 200))}`);
-    if (d.time) rows.push(`⏰ Удобно звонить: ${esc(String(d.time).slice(0, 20))}`);
+    if (d.time) rows.push(`⏰ Удобно звонить: ${esc(String(d.time).slice(0, 40))}`);
     await sendTelegram(rows.join("\n"));
     return res.status(200).json({ ok: true });
   }
@@ -118,7 +118,7 @@ module.exports = async (req, res) => {
     `📍 <b>Регион:</b> ${REGION[d.region]}${d.district ? ", " + esc(String(d.district).slice(0, 60)) : ""}`,
   ];
   if (Array.isArray(d.home) && d.home.length) lines.push(`🏠 <b>Дома:</b> ${esc(d.home.slice(0, 6).join(", ").slice(0, 200))}`);
-  if (d.time) lines.push(`⏰ <b>Удобно звонить:</b> ${esc(String(d.time).slice(0, 20))}`);
+  if (d.time) lines.push(`⏰ <b>Удобно звонить:</b> ${esc(String(d.time).slice(0, 40))}`);
   lines.push("", `🌐 Язык: ${d.lang === "ru" ? "RU" : "UZ"} · Кнопка: ${esc(String(d.source || "-").slice(0, 30))}`);
   if (utmLine) lines.push(`📣 ${utmLine}`);
   lines.push(`🕒 ${time}`);

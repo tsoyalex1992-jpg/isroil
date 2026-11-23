@@ -452,3 +452,28 @@ details[summary]:hover summary,details summary:hover{color:var(--pool-d)}
   .js .r{opacity:1;transform:none;transition:none}
   .hero .badge,.hero h1,.hero__cta>*{animation:none}
 }
+
+/* ======================================================================
+   Менеджер: «Men kimman», 3 савол, одноколоночное демо
+   ====================================================================== */
+.about__in{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;align-items:center}
+.about__pic{max-width:420px;width:100%;margin:0 auto;padding:0 12px 12px 0}
+.about__pic img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--arch);box-shadow:0 0 0 2px var(--g),10px 12px 0 2px var(--peach)}
+.about h2{margin-bottom:12px}
+.about .sec__lead{margin-bottom:22px;font-size:19px}
+.ticks--dark{margin-bottom:28px}
+.ticks--dark li{font-weight:600;align-items:flex-start}
+.ticks--dark .ic{color:var(--pool-d);background:#fff;box-shadow:0 0 0 1px var(--line);margin-top:2px}
+.qa{border-top:2px solid var(--g);margin-top:8px}
+.qa li{display:grid;gap:12px;padding:22px 0;border-bottom:1px solid rgba(7,59,63,.22)}
+.qa b{font-family:var(--f-head);font-size:20px;line-height:1.2;letter-spacing:-.02em}
+.ans{display:inline-flex;gap:10px;align-items:center;justify-self:start;background:#fff;border-radius:16px;padding:12px 16px;font-weight:700;color:var(--g);box-shadow:0 10px 24px -16px rgba(7,59,63,.5)}
+.ans .ic{color:var(--pool-d);flex:none}
+.demo--solo{max-width:760px}
+.demo--solo .demo__txt{width:100%}
+@media(min-width:760px){
+  .about__in{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:72px}
+  .qa li{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:32px}
+  .qa b{font-size:22px}
+  .demo--solo{grid-template-columns:minmax(0,1fr)}
+}
